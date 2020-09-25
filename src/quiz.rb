@@ -17,8 +17,6 @@ q8 = "Who are the best types of people to pair up with during a zombocalypse?\n(
 q9 = "According to the 'Zombie Survival Guide what is the best blunt weapon to carry?\n(a)A sledgehammer\n(b)A steel crowbar\n(c)An aluminium bat\n(d)A frying pan"
 q10 = "According to the “Zombie Survival Guide,” which of the following is a cheap and effective way to kill multiple zombies at once with fire?\n(a)Sing a song becuase your voice is pure fire\n(b)A Blowtorch\n(c)A lighter and can of hairspray\n(d)Molotov Cocktails"
 
-
-
 questions = [
     Question.new(q1, "a"),
     Question.new(q2, "d"),
@@ -33,14 +31,15 @@ questions = [
     ]
 
 def zombie_quiz(questions)
-    answer = ""
+    system("clear")
     points = 0
     for question in questions
         puts question.prompt
-        answer = gets.chomp()
+        answer = gets.chomp
         if answer == question.answer
             points +=1
         end
+        system("clear")
     end
     puts ("Well done contestant you have recieved #{points} points")
 end

@@ -1,3 +1,6 @@
+
+
+
 puts "Welcome to ZombieRoyale"
 puts "Contestant, what is your name?"
     name = gets.chomp
