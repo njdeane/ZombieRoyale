@@ -1,6 +1,6 @@
 # Zombie Royale
 
-## GitHub Repository:
+## GitHub Repository: https://github.com/njdeane/ZombieRoyale
 
 ## Software Development Plan:
 ### Purpose & Scope
