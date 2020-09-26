@@ -82,7 +82,8 @@ def zombie_quiz(questions)
         end
         system("clear")
     end
-    puts ("Well done contestant you have recieved #{points} points")
+    puts ("Well done contestant you have recieved #{points} points") #how do i add the contestants "name" to this line as its defined in menu.rb
+    menu
 end
 
 zombie_quiz(questions)
