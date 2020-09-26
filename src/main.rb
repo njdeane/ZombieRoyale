@@ -1,16 +1,17 @@
-# this is the welcome to the game and story set up
-require_relative "welcome.rb"
+# This file controls the game.. pulling data from other files.
+
+
+
+# this is the welcome to the game and story screens
+require_relative "methods.rb"
 puts welcome
 
 # need to add the feature that allows spacebar to proceed to menu #
 
 # enter the menu section
-require_relative "menu.rb"
-menu
+puts menu
 
-# enter the quiz feature
+# enter the quiz feature if "a" is selected
 require_relative "quiz.rb"
 zombie_quiz(questions)
 
-# so far the game runs through welcome.rb, then menu (menu is only currently linked to quiz) then quiz. then it returns
-# to menu which is great but it repeats the asking of the player name
