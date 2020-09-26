@@ -5,18 +5,21 @@ puts "Welcome to ZombieRoyale"
 puts "Contestant, what is your name?"
     name = gets.chomp
     puts "Welcome to the menu #{name}, here you will navigate throughout your journey to score the prized vaccine"
+    sleep 2.0
+    system("clear")
 loop do
-        puts "Contestant #{name} you may enter the 
-                                Quiz: 
-                                Body Parts Shop:
-                                ZombieRoyale:"
+        puts "Contestant #{name} you may enter: 
+
+        (a) Quiz: 
+        (b) Body Parts Shop:
+        (c) ZombieRoyale:"
         input = gets.chomp
-        if input == "Quiz"
+        if input == "a"
             puts "Contestant #{name} welcome to the quiz, here you compete for points to spend in the Body Part Shop"
-        elsif input == "Body Parts Shop"
+        elsif input == "b"
             puts "Contestant #{name} welcome to the Body Part Shop, here you will spend your points to purchase body parts 
                     to feed and strengthen your zombie"
-        elsif input == "BattleRoyale"
+        elsif input == "c"
             puts "Contestant #{name} welcome to ZombieRoyale here you will compete for the vaccine"
         else
             puts "invalid input"
