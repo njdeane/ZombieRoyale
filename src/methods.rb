@@ -49,7 +49,8 @@ def menu
         Contestant #{@name} you may enter:\n 
         (a) Quiz: 
         (b) Body Parts Shop:
-        (c) Zombie Royale:"
+        (c) Zombie Royale:\n
+        (d) Instructions:"
         input = gets.chomp
         if input == "a"
             require_relative "quiz.rb"
@@ -58,6 +59,9 @@ def menu
             body_part_shop
         elsif input == "c"
             zombie_royale
+        elsif
+            input == "d"
+            instructions
         else
             puts "invalid input"
         end
@@ -89,8 +93,9 @@ def body_part_shop
     puts puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
 here you will spend your points to purchase body parts to feed and strengthen your zombie.
 The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...
-Totally not a rip 'Battle Royale' by the way, nope not at all."
+Totally not a rip of 'Battle Royale' by the way, nope not at all."
     pause
+    system("clear")
 end
 
 def zombie_royale
@@ -98,4 +103,22 @@ def zombie_royale
     puts "Contestant #{@name} welcome to Zombie Royale here you will compete for the vaccine."
         sleep 1.0
     puts "Your Zombie has a strength rating of #{@strength}"
+end
+
+def instructions
+    system("clear")
+    puts "INSTRUCTIONS:\n
+Zombie Royale is a simple text based zombie trivia game.\n
+To navigate the game press the key that preceeds the prompt, for example if you encounter (a) Quiz:
+pressing the 'a' key will take you to the quiz.\n
+The object of the game is to answer as many questions in the quiz correctly in order to earn points.
+After gaining points in the Quiz you will then proceed to the Body Part Shop.\n
+The Body Part Shop is where you purchase body parts using the points you have earned.
+The more points you have earned the more body parts you can feed your zombie, this makes your zombie strong.\n
+Following the prior two stages, you may enter the battle known as Zombie Royale. This is where you 
+battle your zombie against another contestants zombie.\n
+in the hopes of winning the prized vaccine..."
+    pause
+    system("clear")
+    menu
 end
