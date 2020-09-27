@@ -22,6 +22,7 @@ def banner2
     puts "                              ███ ░███                                                                          ░███      "
     puts "                             ░░██████                                                                           █████     "
     puts "                              ░░░░░░                                                                           ░░░░░      "
+    puts "                                                                                                                          "
 end
 
 def pause
@@ -31,19 +32,19 @@ end
 
 def welcome
     puts "Welcome to..." 
-        sleep 0.5
+        sleep 2.0
         system("clear")
         puts banner
-        sleep 0.5
+        sleep 2.0
         system("clear")
     puts "As you are aware the zombie apocalypse has happened..." 
-        sleep 0.5
+        sleep 3.0
         system("clear")
     puts "It was fortold in countless TV shows, movies and folklore..."
-        sleep 0.5
+        sleep 4.0
         system("clear")
     puts "Here you will contend for a vaccine so you may walk the earth,\nImmune to the zombie virus..."
-        sleep 0.5
+        sleep 5.0
         system("clear")
     puts "Do you have what it takes?"
     pause
@@ -101,7 +102,7 @@ def zombie_quiz(questions)
         system("clear")
     end
     puts ("Well done contestant #{@name} you have recieved #{@points} points:")
-        sleep 0.5
+        sleep 4.0
         system("clear")
     menu
 end
@@ -117,12 +118,15 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
     pause
     system("clear")
     banner2
+    puts "You have now aquired a zombie what would you like to name him/her...it?\n
+please enter a name and press [enter]:"
+    @zombie = gets.chomp
     pause
     system("clear")
     while @points > 0 
         puts "Contestant #{@name} you have #{@points} points remaining."
-        puts "Your zombie has a strength value of #{@strength}."
-        puts "Redeem your points for your desired body part:\n
+        puts "Your zombie #{@zombie} has a strength value of #{@strength}.\n
+            Redeem your points for your desired body part:\n
             (a) Head:
                 Cost: 5 points
                 Zombie strength + 10\n
@@ -134,11 +138,13 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
                 Zombie strength + 3\n
             (d) Hand:
                 Cost: 1 point
-                Zombie strength + 1"
+                Zombie strength + 1\n
+                Points:   = #{@points}
+                Strength: = #{@strength}"
         input = gets.chomp
         if input == "a"
             @points -= 5
-            @strenght += 10
+            @strength += 10
             system("clear")
         elsif input == "b"
             @points -= 3
@@ -158,8 +164,8 @@ end
 
 def zombie_royale
     system("clear")
-    puts "Contestant #{@name} welcome to Zombie Royale here you will compete for the vaccine."
-        sleep 1.0
+    puts "Contestant #{@name} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
+        sleep 5.0
     puts "Your Zombie has a strength rating of #{@strength}"
 end
 

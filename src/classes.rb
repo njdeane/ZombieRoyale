@@ -1,11 +1,11 @@
 
 class User
-    attr_accessor :name, :points, :strength
-    
-    def initialize(name, points, strength)
+    attr_accessor :name, :points, :strength, :zombie
+    def initialize(name, points, strength, zombie)
         @name = name # storing user name
         @points = 0 # storing user points
         @strength = 0 # storing zombie strength status
+        @zombie = zombie
     end
 end
 
