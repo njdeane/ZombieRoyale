@@ -16,3 +16,4 @@ class Question
         @answer = answer
     end
 end 
+

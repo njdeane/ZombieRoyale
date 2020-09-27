@@ -10,10 +10,25 @@ def banner
     puts ""
 end
 
+def banner2
+    puts "███████████             █████             ███████████                 █████        █████████ █████                        "
+    puts "░░███░░░░░███           ░░███             ░░███░░░░░███               ░░███        ███░░░░░██░░███                        "
+    puts " ░███    ░███ ██████  ████████████ ████    ░███    ░████████ ████████ ███████     ░███    ░░░ ░███████   ██████ ████████  "
+    puts " ░██████████ ███░░██████░░██░░███ ░███     ░█████████░░░░░██░░███░░██░░░███░      ░░█████████ ░███░░███ ███░░██░░███░░███ "
+    puts " ░███░░░░░██░███ ░██░███ ░███░███ ░███     ░███░░░░░░ ███████░███ ░░░  ░███        ░░░░░░░░███░███ ░███░███ ░███░███ ░███ "
+    puts " ░███    ░██░███ ░██░███ ░███░███ ░███     ░███      ███░░███░███      ░███ ███    ███    ░███░███ ░███░███ ░███░███ ░███ "
+    puts " ███████████░░██████░░███████░░███████     █████    ░░████████████     ░░█████    ░░█████████ ████ ████░░██████ ░███████  "
+    puts "░░░░░░░░░░░  ░░░░░░  ░░░░░░░░ ░░░░░███    ░░░░░      ░░░░░░░░░░░░       ░░░░░      ░░░░░░░░░ ░░░░ ░░░░░ ░░░░░░  ░███░░░   "
+    puts "                              ███ ░███                                                                          ░███      "
+    puts "                             ░░██████                                                                           █████     "
+    puts "                              ░░░░░░                                                                           ░░░░░      "
+end
+
 def pause
     puts "\nPress [enter] to continue"
     gets 
 end
+
 def welcome
     puts "Welcome to..." 
         sleep 0.5
@@ -63,7 +78,10 @@ def menu
             input == "d"
             instructions
         else
-            puts "invalid input"
+            system("clear")
+            puts "Invalid input, you will be redirected to Instructions for tutelage:"
+            sleep 4.0
+            instructions
         end
     end
 end
@@ -89,13 +107,53 @@ def zombie_quiz(questions)
 end
 
 def body_part_shop
+    require_relative "classes.rb"
+    @strength = 0
     system("clear")
     puts puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
-here you will spend your points to purchase body parts to feed and strengthen your zombie.
-The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...
+here you will spend your points to purchase body parts to feed and strengthen your zombie.\n
+The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...\n
 Totally not a rip of 'Battle Royale' by the way, nope not at all."
     pause
     system("clear")
+    banner2
+    pause
+    system("clear")
+    while @points > 0 
+        puts "Contestant #{@name} you have #{@points} points remaining."
+        puts "Your zombie has a strength value of #{@strength}."
+        puts "Redeem your points for your desired body part:\n
+            (a) Head:
+                Cost: 5 points
+                Zombie strength + 10\n
+            (b) Torso:
+                Cost: 3 points
+                Zombie strength + 5\n
+            (c) Arm:
+                Cost: 2 points
+                Zombie strength + 3\n
+            (d) Hand:
+                Cost: 1 point
+                Zombie strength + 1"
+        input = gets.chomp
+        if input == "a"
+            @points -= 5
+            @strenght += 10
+            system("clear")
+        elsif input == "b"
+            @points -= 3
+            @strength += 5
+            system("clear")
+        elsif input == "c"
+            @points -= 2
+            @strength += 3
+            system("clear")
+        else input == "d"
+            @points -= 1
+            @strength += 1
+            system("clear")
+        end
+    end
 end
 
 def zombie_royale
