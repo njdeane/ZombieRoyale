@@ -10,7 +10,10 @@ def banner
     puts ""
 end
 
-
+def pause
+    puts "\nPress [enter] to continue"
+    gets 
+end
 def welcome
     puts "Welcome to..." 
         sleep 0.5
@@ -28,33 +31,71 @@ def welcome
         sleep 0.5
         system("clear")
     puts "Do you have what it takes?"
+    pause
+end
+
+def create_contestant
+    system("clear")
+    puts "Contestant, what is your name?"
+        @name = gets.chomp 
+    system("clear")
 end
 
 def menu
+    require_relative "classes.rb"
     loop do
-        puts "Contestant, what is your name?"
-        name = gets.chomp # how do I store this name in the class User in classes.rb
-        system("clear")
         banner
-        puts "Welcome to the menu #{name}, here you will navigate throughout your journey to score the prized vaccine."
-        puts "Contestant #{name} you may enter:\n 
+        puts "Welcome to the menu #{@name}, here you will navigate throughout your journey to score the prized vaccine.\n
+        Contestant #{@name} you may enter:\n 
         (a) Quiz: 
         (b) Body Parts Shop:
-        (c) ZombieRoyale:"
+        (c) Zombie Royale:"
         input = gets.chomp
         if input == "a"
-            system("clear")
-            puts "Contestant #{name} welcome to the quiz, here you compete for points to spend in the Body Part Shop."
-            sleep 5.0
             require_relative "quiz.rb"
             zombie_quiz(questions)
         elsif input == "b"
-            puts "Contestant #{name} welcome to the Body Part Shop, here you will spend your points to purchase body parts...\nto feed and strengthen your zombie."
+            body_part_shop
         elsif input == "c"
-            puts "Contestant #{name} welcome to ZombieRoyale here you will compete for the vaccine."
+            zombie_royale
         else
             puts "invalid input"
         end
     end
 end
 
+def zombie_quiz(questions)
+    system("clear")
+    puts "Contestant #{@name} welcome to the quiz: here you compete for points to spend in the Body Part Shop."
+    pause
+    system("clear")
+    @points = 0 
+    for question in questions
+        puts question.prompt
+        answer = gets.chomp
+        if answer == question.answer
+            @points +=1
+        end
+        system("clear")
+    end
+    puts ("Well done contestant #{@name} you have recieved #{@points} points:")
+        sleep 0.5
+        system("clear")
+    menu
+end
+
+def body_part_shop
+    system("clear")
+    puts puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
+here you will spend your points to purchase body parts to feed and strengthen your zombie.
+The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...
+Totally not a rip 'Battle Royale' by the way, nope not at all."
+    pause
+end
+
+def zombie_royale
+    system("clear")
+    puts "Contestant #{@name} welcome to Zombie Royale here you will compete for the vaccine."
+        sleep 1.0
+    puts "Your Zombie has a strength rating of #{@strength}"
+end

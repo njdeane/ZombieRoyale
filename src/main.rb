@@ -2,16 +2,19 @@
 
 
 
-# this is the welcome to the game and story screens
+# This is the welcome to the game screen and intial story
 require_relative "methods.rb"
-puts welcome
+welcome #welcome method from methods.rb
 
-# need to add the feature that allows spacebar to proceed to menu #
+# !need to add the feature that allows spacebar to proceed to menu! #
 
-# enter the menu section
-puts menu
+# following welcome to the game, create a user with class.User
+create_contestant
 
-# enter the quiz feature if "a" is selected
+# enter the menu section and navigate to quiz, body part shop or zombie royale battle
+menu
+
+# if "a" is selected enter quiz
 require_relative "quiz.rb"
-zombie_quiz(questions)
+zombie_quiz(questions) # after quiz user is returned to menu
 

@@ -1,6 +1,18 @@
+
 class User
-    def initialize(name)
-        @name = name # how do i store contestant name entered at menu here?
-        @points = #how do i store points gained in quiz here?
+    attr_accessor :name, :points, :strength
+    
+    def initialize(name, points, strength)
+        @name = name # storing user name
+        @points = 0 # storing user points
+        @strength = 0 # storing zombie strength status
     end
 end
+
+class Question
+    attr_accessor :prompt, :answer
+    def initialize (prompt, answer)
+        @prompt = prompt
+        @answer = answer
+    end
+end 

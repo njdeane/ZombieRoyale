@@ -1,13 +1,5 @@
+# QUIZ QUESTIONS
 
-class Question
-    attr_accessor :prompt, :answer
-    def initialize (prompt, answer)
-        @prompt = prompt
-        @answer = answer
-    end
-end 
-
-# how do i store all these questions in another file like JSON or .txt?
 q1 = "Which TV series tells the story of Rick Grimes, who wakes from a coma to discover a world overrun by zombies?\n
 (a) The Walking Dead
 (b) Pandemic
@@ -59,6 +51,7 @@ q10 = "According to the 'Zombie Survival Guide', which of the following is a che
 (c)A lighter and can of hairspray
 (d)Molotov Cocktails"
 
+# Question answers
 questions = [
     Question.new(q1, "a"),
     Question.new(q2, "d"),
@@ -72,24 +65,8 @@ questions = [
     Question.new(q10, "d"),
     ]
 
-def zombie_quiz(questions)
-    system("clear")
-    sleep 0.5
-    points = 0 # how do i store the final iteration of points in the class User points in classes.rb?
-    for question in questions
-        puts question.prompt
-        answer = gets.chomp
-        if answer == question.answer
-            points +=1
-        end
-        system("clear")
-    end
-    puts ("Well done contestant you have recieved #{points} points") #how do i add the contestants "name" to this line as its defined in menu.rb
-    menu
-end
-
 zombie_quiz(questions)
 
-# basic shell for quiz section with some sample questions. maybe need to store the questions externally?
+# maybe need to store the questions externally?
 
 
