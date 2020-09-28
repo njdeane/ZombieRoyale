@@ -1,29 +1,7 @@
-def banner
-    puts " #######                                  ######                                    " 
-    puts "      #   ####  #    # #####  # ######    #     #  ####  #   #   ##   #      ###### " 
-    puts "     #   #    # ##  ## #    # # #         #     # #    #  # #   #  #  #      #      " 
-    puts "    #    #    # # ## # #####  # #####     ######  #    #   #   #    # #      #####  " 
-    puts "   #     #    # #    # #    # # #         #   #   #    #   #   ###### #      #      " 
-    puts "  #      #    # #    # #    # # #         #    #  #    #   #   #    # #      #      " 
-    puts " #######  ####  #    # #####  # ######    #     #  ####    #   #    # ###### ###### " 
-    puts "____________________________________________________________________________________"
-    puts ""
-end
+require 'colorize'
+require_relative "classes.rb"
+require_relative "banners.rb"
 
-def banner2
-    puts "███████████             █████             ███████████                 █████        █████████ █████                        "
-    puts "░░███░░░░░███           ░░███             ░░███░░░░░███               ░░███        ███░░░░░██░░███                        "
-    puts " ░███    ░███ ██████  ████████████ ████    ░███    ░████████ ████████ ███████     ░███    ░░░ ░███████   ██████ ████████  "
-    puts " ░██████████ ███░░██████░░██░░███ ░███     ░█████████░░░░░██░░███░░██░░░███░      ░░█████████ ░███░░███ ███░░██░░███░░███ "
-    puts " ░███░░░░░██░███ ░██░███ ░███░███ ░███     ░███░░░░░░ ███████░███ ░░░  ░███        ░░░░░░░░███░███ ░███░███ ░███░███ ░███ "
-    puts " ░███    ░██░███ ░██░███ ░███░███ ░███     ░███      ███░░███░███      ░███ ███    ███    ░███░███ ░███░███ ░███░███ ░███ "
-    puts " ███████████░░██████░░███████░░███████     █████    ░░████████████     ░░█████    ░░█████████ ████ ████░░██████ ░███████  "
-    puts "░░░░░░░░░░░  ░░░░░░  ░░░░░░░░ ░░░░░███    ░░░░░      ░░░░░░░░░░░░       ░░░░░      ░░░░░░░░░ ░░░░ ░░░░░ ░░░░░░  ░███░░░   "
-    puts "                              ███ ░███                                                                          ░███      "
-    puts "                             ░░██████                                                                           █████     "
-    puts "                              ░░░░░░                                                                           ░░░░░      "
-    puts "                                                                                                                          "
-end
 
 def pause
     puts "\nPress [enter] to continue"
@@ -32,21 +10,18 @@ end
 
 def welcome
     puts "Welcome to..." 
-        sleep 2.0
+        sleep 0.5
         system("clear")
         puts banner
-        sleep 2.0
+        sleep 0.5
         system("clear")
-    puts "As you are aware the zombie apocalypse has happened..." 
-        sleep 3.0
-        system("clear")
-    puts "It was fortold in countless TV shows, movies and folklore..."
-        sleep 4.0
-        system("clear")
+    puts "As you are aware the zombie apocalypse has happened...\n" 
+        sleep 0.5
+    puts "It was fortold in countless TV shows, movies and folklore...\n"
+        sleep 0.5
     puts "Here you will contend for a vaccine so you may walk the earth,\nImmune to the zombie virus..."
-        sleep 5.0
-        system("clear")
-    puts "Do you have what it takes?"
+        sleep 0.5
+    puts "Do you have what it takes?".colorize(:red)
     pause
 end
 
@@ -58,7 +33,6 @@ def create_contestant
 end
 
 def menu
-    require_relative "classes.rb"
     loop do
         banner
         puts "Welcome to the menu #{@name}, here you will navigate throughout your journey to score the prized vaccine.\n
@@ -81,7 +55,7 @@ def menu
         else
             system("clear")
             puts "Invalid input, you will be redirected to Instructions for tutelage:"
-            sleep 4.0
+            sleep 0.5
             instructions
         end
     end
@@ -101,17 +75,16 @@ def zombie_quiz(questions)
         end
         system("clear")
     end
-    puts ("Well done contestant #{@name} you have recieved #{@points} points:")
-        sleep 4.0
+    puts "Well done contestant #{@name} you have recieved #{@points} points:"
+        sleep 0.5
         system("clear")
     menu
 end
 
 def body_part_shop
-    require_relative "classes.rb"
     @strength = 0
     system("clear")
-    puts puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
+    puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
 here you will spend your points to purchase body parts to feed and strengthen your zombie.\n
 The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...\n
 Totally not a rip of 'Battle Royale' by the way, nope not at all."
@@ -119,7 +92,7 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
     system("clear")
     banner2
     puts "You have now aquired a zombie what would you like to name him/her...it?\n
-please enter a name and press [enter]:"
+    please enter a name and press [enter]:"
     @zombie = gets.chomp
     pause
     system("clear")
@@ -165,23 +138,23 @@ end
 def zombie_royale
     system("clear")
     puts "Contestant #{@name} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
-        sleep 5.0
+        sleep 0.5
     puts "Your Zombie has a strength rating of #{@strength}"
 end
 
 def instructions
     system("clear")
-    puts "INSTRUCTIONS:\n
-Zombie Royale is a simple text based zombie trivia game.\n
-To navigate the game press the key that preceeds the prompt, for example if you encounter (a) Quiz:
-pressing the 'a' key will take you to the quiz.\n
-The object of the game is to answer as many questions in the quiz correctly in order to earn points.
-After gaining points in the Quiz you will then proceed to the Body Part Shop.\n
-The Body Part Shop is where you purchase body parts using the points you have earned.
-The more points you have earned the more body parts you can feed your zombie, this makes your zombie strong.\n
-Following the prior two stages, you may enter the battle known as Zombie Royale. This is where you 
-battle your zombie against another contestants zombie.\n
-in the hopes of winning the prized vaccine..."
+    puts "INSTRUCTIONS:\n".colorize(:red)
+puts "Zombie Royale is a simple text based zombie trivia game.\n
+    To navigate the game press the key that preceeds the prompt, for example if you encounter (a) Quiz:
+    pressing the 'a' key will take you to the quiz.\n
+    The object of the game is to answer as many questions in the quiz correctly in order to earn points.
+    After gaining points in the Quiz you will then proceed to the Body Part Shop.\n
+    The Body Part Shop is where you purchase body parts using the points you have earned.
+    The more points you have earned the more body parts you can feed your zombie, this makes your zombie strong.\n
+    Following the prior two stages, you may enter the battle known as Zombie Royale. This is where you 
+    battle your zombie against another contestants zombie.\n
+    in the hopes of winning the prized vaccine..."
     pause
     system("clear")
     menu

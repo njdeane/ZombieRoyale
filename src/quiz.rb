@@ -21,35 +21,35 @@ q4 = "In the TV show Z Nation what is the name of the main character?\n
 (c) Murphy
 (d) Muldoon"
 q5 = "How do you kill a zombie?\n
-(a)Shoot/stab the brain
-(b)Burn it to ashes
-(c)Nuclear bomb to the face
-(d)All of the above"
+(a) Shoot/stab the brain
+(b) Burn it to ashes
+(c) Nuclear bomb to the face
+(d) All of the above"
 q6 = "Released in 2009, what comedy zombie film stars Woody Harrelson as Tallahassee?\n
-(a)Shaun of the Dead
-(b)Zombies! Zombies! Zombies!
-(c)Zombieland
-(d)Resident Evil"
+(a) Shaun of the Dead
+(b) Zombies! Zombies! Zombies!
+(c) Zombieland
+(d) Resident Evil"
 q7 = "Which TV show features a substance that calms zombies known as 'Z Weed'?\n
-(a)South Park
-(b)Z Nation
-(c)Bob the Builder
-(d)Night of the Walking Dead"
+(a) South Park
+(b) Z Nation
+(c) Bob the Builder
+(d )Night of the Walking Dead"
 q8 = "Who would be the best choice to pair up with during a zombocalypse?\n
-(a)A T-1000 kindly provided to you by Skynet
-(b)Dora the Explorer
-(c)Eric Cartman
-(d)Your pet HedgeHog"
+(a) A T-1000 kindly provided to you by Skynet
+(b) Dora the Explorer
+(c) Eric Cartman
+(d) Your pet HedgeHog"
 q9 = "According to the 'Zombie Survival Guide' what is the best blunt weapon to carry?\n
-(a)A sledgehammer 
-(b)A steel crowbar
-(c)An aluminium bat
-(d)A frying pan"
+(a) A sledgehammer 
+(b) A steel crowbar
+(c) An aluminium bat
+(d) A frying pan"
 q10 = "According to the 'Zombie Survival Guide', which of the following is a cheap and effective way to kill multiple zombies at once with fire?\n
-(a)Sing a song becuase your voice is pure fire
-(b)A Blowtorch
-(c)A lighter and can of hairspray
-(d)Molotov Cocktails"
+(a) Sing a song becuase your voice is pure fire
+(b) A Blowtorch
+(c) A lighter and can of hairspray
+(d) Molotov Cocktails"
 
 # Question answers
 questions = [
