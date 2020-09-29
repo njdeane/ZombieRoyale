@@ -10,17 +10,17 @@ end
 
 def welcome
     puts "Welcome to..." 
-        sleep 0.5
+        sleep 1.0
         system("clear")
         puts banner
-        sleep 0.5
+        sleep 1.0
         system("clear")
     puts "As you are aware the zombie apocalypse has happened...\n" 
-        sleep 0.5
+        sleep 1.0
     puts "It was fortold in countless TV shows, movies and folklore...\n"
-        sleep 0.5
+        sleep 1.0
     puts "Here you will contend for a vaccine so you may walk the earth,\nImmune to the zombie virus..."
-        sleep 0.5
+        sleep 1.0
     puts "Do you have what it takes?".colorize(:red)
     pause
 end
@@ -55,7 +55,7 @@ def menu
         else
             system("clear")
             puts "Invalid input, you will be redirected to Instructions for tutelage:"
-            sleep 0.5
+            sleep 1.0
             instructions
         end
     end
@@ -76,7 +76,7 @@ def zombie_quiz(questions)
         system("clear")
     end
     puts "Well done contestant #{@name} you have recieved #{@points} points:"
-        sleep 0.5
+        sleep 1.0
         system("clear")
     menu
 end
@@ -138,7 +138,7 @@ end
 def zombie_royale
     system("clear")
     puts "Contestant #{@name} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
-        sleep 0.5
+        sleep 1.5
     puts "Your Zombie has a strength rating of #{@strength}"
 end
 
