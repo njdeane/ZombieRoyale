@@ -54,7 +54,7 @@ def menu
             instructions
         else
             system("clear")
-            puts "Invalid input, you will be redirected to Instructions for tutelage:"
+            puts "Invalid input, you will be redirected to Instructions for tutelage:".colorize(:red)
             sleep 1.0
             instructions
         end
@@ -63,7 +63,11 @@ end
 
 def zombie_quiz(questions)
     system("clear")
+<<<<<<< HEAD
     puts "Contestant #{@name.colorize(:red)} welcome to the quiz: here you compete for points to spend in the Body Part Shop."
+=======
+    puts "Contestant #{@name} welcome to the quiz: here you compete for points to spend in the Body Part Shop.".colorize(:red)
+>>>>>>> 6859d903e8ff086261927aa13334f5e87caa4884
     pause
     system("clear")
     @points = 0 
@@ -92,7 +96,7 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
     system("clear")
     banner2
     puts "You have now aquired a zombie what would you like to name him/her...it?\n
-    please enter a name and press [enter]:"
+    please enter a name and press [enter]:".colorize(:red)
     @zombie = gets.chomp
     pause
     system("clear")
@@ -140,7 +144,10 @@ def zombie_royale
     puts "Contestant #{@name.colorize(:red)} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
         sleep 1.5
     puts "Your Zombie has a strength rating of #{@strength}".colorize(:red)
+<<<<<<< HEAD
     pause
+=======
+>>>>>>> 6859d903e8ff086261927aa13334f5e87caa4884
 end
 
 def instructions
