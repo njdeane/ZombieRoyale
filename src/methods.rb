@@ -35,8 +35,8 @@ end
 def menu
     loop do
         banner
-        puts "Welcome to the menu #{@name}, here you will navigate throughout your journey to score the prized vaccine.\n
-        Contestant #{@name} you may enter:\n 
+        puts "Welcome to the menu #{@name.colorize(:red)}, here you will navigate throughout your journey to score the prized vaccine.\n
+        Contestant #{@name.colorize(:red)} you may enter:\n 
         (a) Quiz: 
         (b) Body Parts Shop:
         (c) Zombie Royale:\n
@@ -63,7 +63,7 @@ end
 
 def zombie_quiz(questions)
     system("clear")
-    puts "Contestant #{@name} welcome to the quiz: here you compete for points to spend in the Body Part Shop."
+    puts "Contestant #{@name.colorize(:red)} welcome to the quiz: here you compete for points to spend in the Body Part Shop."
     pause
     system("clear")
     @points = 0 
@@ -137,9 +137,10 @@ end
 
 def zombie_royale
     system("clear")
-    puts "Contestant #{@name} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
+    puts "Contestant #{@name.colorize(:red)} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
         sleep 1.5
-    puts "Your Zombie has a strength rating of #{@strength}"
+    puts "Your Zombie has a strength rating of #{@strength}".colorize(:red)
+    pause
 end
 
 def instructions

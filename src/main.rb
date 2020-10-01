@@ -6,8 +6,6 @@
 require_relative "methods.rb"
 welcome #welcome method from methods.rb
 
-# !need to add the feature that allows spacebar to proceed to menu! #
-
 # following welcome to the game, create a user with class.User
 create_contestant
 
