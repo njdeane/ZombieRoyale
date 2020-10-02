@@ -67,7 +67,7 @@ Next you will need to "clone" Zombie Royale to your computer:<br>
 To do this use the search function of your computer and search for "Terminal" click on the result that pops up. A terminal will now launch on your computer.<br>
 <br>
 To "clone" the Zombie Royale repository to your computer type the following into the terminal application:<br>
-git clone https://trello.com/b/vDNtREqs/zombie-royale<br>
+git clone git@github.com:njdeane/ZombieRoyale.git<br>
 Then press enter on your keyboard.
 <br>
 <br>
