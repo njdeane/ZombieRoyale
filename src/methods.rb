@@ -1,4 +1,6 @@
 require 'colorize'
+require 'tty-box'
+require 'tty-link'
 require_relative "classes.rb"
 require_relative "banners.rb"
 
@@ -39,8 +41,9 @@ def menu
         Contestant #{@name.colorize(:red)} you may enter:\n 
         (a) Quiz: 
         (b) Body Parts Shop:
-        (c) Zombie Royale:\n
-        (d) Instructions:"
+        (c) Zombie Royale:
+        (d) Instructions:\n"
+        puts TTY::Link.link_to("For more work by the author visit", "https://github.com/njdeane")
         input = gets.chomp
         if input == "a"
             require_relative "quiz.rb"
@@ -63,15 +66,13 @@ end
 
 def zombie_quiz(questions)
     system("clear")
-<<<<<<< HEAD
-    puts "Contestant #{@name.colorize(:red)} welcome to the quiz: here you compete for points to spend in the Body Part Shop."
-=======
+    print TTY::Box.frame "Quiz:"
     puts "Contestant #{@name} welcome to the quiz: here you compete for points to spend in the Body Part Shop.".colorize(:red)
->>>>>>> 6859d903e8ff086261927aa13334f5e87caa4884
     pause
     system("clear")
     @points = 0 
     for question in questions
+        print TTY::Box.frame "Quiz:"
         puts question.prompt
         answer = gets.chomp
         if answer == question.answer
@@ -88,6 +89,7 @@ end
 def body_part_shop
     @strength = 0
     system("clear")
+    print TTY::Box.frame "Body Part Shop:"
     puts "Contestant #{@name} welcome to the Body Part Shop. You have #{@points} points:\n 
 here you will spend your points to purchase body parts to feed and strengthen your zombie.\n
 The more you feed your zombie the stronger it will become for the battle known as Zombie Royale...\n
@@ -95,12 +97,14 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
     pause
     system("clear")
     banner2
+    print TTY::Box.frame "Body Part Shop:"
     puts "You have now aquired a zombie what would you like to name him/her...it?\n
-    please enter a name and press [enter]:".colorize(:red)
+    please enter a name and press [enter]:"
     @zombie = gets.chomp
     pause
     system("clear")
     while @points > 0 
+        print TTY::Box.frame "Body Part Shop:"
         puts "Contestant #{@name} you have #{@points} points remaining."
         puts "Your zombie #{@zombie} has a strength value of #{@strength}.\n
             Redeem your points for your desired body part:\n
@@ -141,17 +145,16 @@ end
 
 def zombie_royale
     system("clear")
+    print TTY::Box.frame "Zombie Royale:"
     puts "Contestant #{@name.colorize(:red)} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
         sleep 1.5
-    puts "Your Zombie has a strength rating of #{@strength}".colorize(:red)
-<<<<<<< HEAD
-    pause
-=======
->>>>>>> 6859d903e8ff086261927aa13334f5e87caa4884
+    print TTY::Box.frame "Your Zombie has a strength rating of #{@strength}:".colorize(:red)
+    # puts "Your Zombie has a strength rating of #{@strength}".colorize(:red)
 end
 
 def instructions
     system("clear")
+    print TTY::Box.frame "Help:"
     puts "INSTRUCTIONS:\n".colorize(:red)
 puts "Zombie Royale is a simple text based zombie trivia game.\n
     To navigate the game press the key that preceeds the prompt, for example if you encounter (a) Quiz:
@@ -163,6 +166,7 @@ puts "Zombie Royale is a simple text based zombie trivia game.\n
     Following the prior two stages, you may enter the battle known as Zombie Royale. This is where you 
     battle your zombie against another contestants zombie.\n
     in the hopes of winning the prized vaccine..."
+    
     pause
     system("clear")
     menu
