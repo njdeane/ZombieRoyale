@@ -51,4 +51,54 @@ Here the user will be greeted with instructions on how the *Body Part Shop* work
 <br>
 Following execution of the previous features by multiple contestants the user may enter the *Battle Royal* feature. With the first release of *Zombie Royale* this feature will output the winning zombie to the screen and the final parts of the story will be displayed. However in subsequent versions of the game this feature will be expanded upon to enable more interactive turn by turn gameplay.
 
+## Control Flow Diagram:
+
+![Flow Chart](docs/Zombie_flowchart.png)
+
+## Implementation Plan: Trello link (public board): https://trello.com/b/vDNtREqs/zombie-royale
+![Trello board](docs/Trello.png)
+
+## Help Documentation:
+
+To install Zombie Royale first navigate to the Zombie Royale GitHub Repository listed at the top of this README document, you may do this with the your internet browser of your choice.
+<br>
+<br>
+Next you will need to "clone" Zombie Royale to your computer:<br>
+To do this use the search function of your computer and search for "Terminal" click on the result that pops up. A terminal will now launch on your computer.<br>
+<br>
+To "clone" the Zombie Royale repository to your computer type the following into the terminal application:<br>
+git clone https://trello.com/b/vDNtREqs/zombie-royale<br>
+Then press enter on your keyboard.
+<br>
+<br>
+The next step is to launch the game via typing into the terminal the following:<br>
+run_zombieroyale.sh
+<br>
+<br>
+Following successful launch of the game you will be greated and prompted to enter your name and begin playing. The game flow is as follows:<br>
+First enter the Quiz, followed by the Body Part Shop and finally entering Zombie Royale. There is also an instructional help menu if you require further instructions whilst playing the game, this help menu is accessed via the main screen of the game as option "d".
+
+## Troubleshooting:
+If the game does not launch you may requre the Ruby Gems the game utilizes:<br>
+Again in the terminal type the following commands to install the Ruby Gems on your computer:<br>
+gem install tty-colorize<br> (then press enter)<br>
+gem install tty-font<br> (then press enter)<br>
+gem install tty-box<br> (then press enter)<br>
+gem install tty-link<br> (then press enter)<br>
+<br>
+Now try run the program again by typing the following and then pressing enter:<br>
+run_zombieroyale.sh
+<br>
+<br>
+## Disclaimer
+Zombie Royale was created in the Ruby programming language on an Apple Mac computer runnung OSX operating system version 10.15.7<br>
+Zombie Royale has not been tested accross multiple operating systems and can therefor not guarantee operation on all platforms.<br>
+<br>
+Zombie Royale is an incomplete game that will be finished in February 2021. It will feature the multiplayer functionality so multiple people can play and contend in the final and most exciting feature of the game which is the battle known as Zombie Royale.<br>
+More quiz questions, a redesigned menu and redisigned game navigation interface will also be implemented. Thank you for your patience.<br>
+<br>
+HAPPY ZOMBIE APOCALYPSE DEAR READER
+
+
+
 
