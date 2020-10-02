@@ -1,7 +1,5 @@
 # This file controls the game.. pulling data from other files.
 
-
-
 # This is the welcome to the game screen and intial story
 require_relative "methods.rb"
 welcome #welcome method from methods.rb

@@ -5,12 +5,6 @@ require 'tty-link'
 require_relative "classes.rb"
 require_relative "banners.rb"
 
-
-def pause
-    puts "\nPress [enter] to continue"
-    gets 
-end
-
 def welcome
     puts "Welcome to..." 
         sleep 1.0

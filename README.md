@@ -71,8 +71,12 @@ git clone git@github.com:njdeane/ZombieRoyale.git<br>
 Then press enter on your keyboard.
 <br>
 <br>
+next type the following and press enter:<br>
+cd src
+<br>
+<br>
 The next step is to launch the game via typing into the terminal the following:<br>
-run_zombieroyale.sh
+./run_zombieroyale.sh
 <br>
 <br>
 Following successful launch of the game you will be greated and prompted to enter your name and begin playing. The game flow is as follows:<br>
@@ -87,7 +91,7 @@ gem install tty-box<br> (then press enter)<br>
 gem install tty-link<br> (then press enter)<br>
 <br>
 Now try run the program again by typing the following and then pressing enter:<br>
-run_zombieroyale.sh
+./run_zombieroyale.sh
 <br>
 <br>
 ## Disclaimer
