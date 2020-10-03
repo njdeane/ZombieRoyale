@@ -15,6 +15,33 @@ def pause
     gets 
 end
 
+# Create contestant method
+def create_contestant
+    system("clear")
+    puts "Contestant, what is your name? (type your name and press [enter]"
+        @name = gets.chomp
+    system("clear")
+end
+
+# Game opening screen
+def welcome
+    puts "Welcome to..." 
+        sleep 1.0
+        system("clear")
+        puts banner
+        sleep 1.0
+        system("clear")
+    puts "As you are aware the zombie apocalypse has happened...\n" 
+        sleep 1.0
+    puts "It was fortold in countless TV shows, movies and folklore...\n"
+        sleep 1.0
+    puts "Here you will contend for a vaccine so you may walk the earth,\nImmune to the zombie virus..."
+        sleep 1.0
+        font = TTY::Font.new(:straight)
+        puts font.write("Do you have what it takes?").colorize(:red)
+    pause
+end
+
 # Instruction screen & invalid input message
 def instructions
     system("clear")

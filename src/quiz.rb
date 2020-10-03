@@ -1,5 +1,4 @@
 # QUIZ QUESTIONS
-
 q1 = "Which TV series tells the story of Rick Grimes, who wakes from a coma to discover a world overrun by zombies?\n
 (a) The Walking Dead
 (b) Pandemic

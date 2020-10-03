@@ -6,33 +6,6 @@ require 'tty-link'
 require_relative "classes.rb"
 require_relative "methods.rb"
 
-# Game opening screen
-def welcome
-    puts "Welcome to..." 
-        sleep 1.0
-        system("clear")
-        puts banner
-        sleep 1.0
-        system("clear")
-    puts "As you are aware the zombie apocalypse has happened...\n" 
-        sleep 1.0
-    puts "It was fortold in countless TV shows, movies and folklore...\n"
-        sleep 1.0
-    puts "Here you will contend for a vaccine so you may walk the earth,\nImmune to the zombie virus..."
-        sleep 1.0
-        font = TTY::Font.new(:straight)
-        puts font.write("Do you have what it takes?").colorize(:red)
-    pause
-end
-
-# Game create contestant from user input
-def create_contestant
-    system("clear")
-    puts "Contestant, what is your name? (type your name and press [enter]"
-        @name = gets.chomp
-    system("clear")
-end
-
 # Main menu with catch for invalid input
 def menu
     loop do
@@ -72,14 +45,14 @@ def zombie_quiz(questions)
     pause
     system("clear")
     @points = 0 
-        for question in questions
-        print TTY::Box.frame "Quiz:".colorize(:red)
-        puts question.prompt
-        answer = gets.chomp
-            if answer == question.answer
-                @points +=1
-            end
-        system("clear")
+    for question in questions
+    print TTY::Box.frame "Quiz:".colorize(:red)
+    puts question.prompt
+    answer = gets.chomp
+        if answer == question.answer
+            @points +=1
+        end
+    system("clear")
     end
     puts "Well done contestant #{@name} you have recieved #{@points} points:"
         sleep 1.0
@@ -87,7 +60,7 @@ def zombie_quiz(questions)
     menu
 end
 
-# Body Part shop feature
+# Body Part shop feature with catch for invalid input
 def body_part_shop
     @strength = 0
     system("clear")
