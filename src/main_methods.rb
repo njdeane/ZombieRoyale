@@ -87,6 +87,7 @@ def zombie_quiz(questions)
     menu
 end
 
+# Body Part shop feature
 def body_part_shop
     @strength = 0
     system("clear")
@@ -137,18 +138,23 @@ Totally not a rip of 'Battle Royale' by the way, nope not at all."
             @points -= 2
             @strength += 3
             system("clear")
-        else input == "d"
+        elsif input == "d"
             @points -= 1
             @strength += 1
+        else
             system("clear")
+            puts "invalid input, please type 'a,b,c,d' only"
+            pause
         end  
+        system("clear")
     end
 end
 
+# Non existant final feature as multiple players cannot play yet
 def zombie_royale
     font = TTY::Font.new(:DOOM)
     system("clear")
-    print TTY::Box.frame "Zombie Royale:".colorize(:red)
+    print TTY::Box.frame "Zombie Royale:".colorize(:green)
     puts "Contestant #{@name.colorize(:red)} welcome to Zombie Royale here you and your warrior zombie #{@zombie} will compete for the vaccine."
     print TTY::Box.frame "Your Zombie has a strength rating of #{@strength}:".colorize(:red)
     pause
