@@ -55,6 +55,9 @@ Following execution of the previous features by multiple contestants the user ma
 
 ![Flow Chart](docs/Zombie_flowchart.png)
 
+## Testing
+![Test Table](docs/Test.png)
+
 ## Implementation Plan: Trello link (public board): https://trello.com/b/vDNtREqs/zombie-royale
 ![Trello board](docs/Trello.png)
 
